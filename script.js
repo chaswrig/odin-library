@@ -4,7 +4,8 @@ const container = document.querySelector('.container');
 
 addBookToLibrary('Tolkien', 'The Hobbit', 456, true, 'Pretty good');
 addBookToLibrary('Neal Stephenson', 'Snow Crash', 700, true, 'Inspired Metaverse');
-displayLibrary();
+addBookToLibrary('William Gibson', 'Neuromancer', 500, true, "Inspired Matrix");
+addBookToLibrary('William Gibson', 'The Peripheral', 500, false, "Yellow Cover");
 displayLibrary();
 
 function Book(author, title, pageCount, read, notes) {
@@ -30,6 +31,9 @@ function displayLibrary(){
         const div = document.createElement('div');
         div.textContent = book.title;
         div.classList.toggle('card');
+        if(book.read == false) {
+            div.style.backgroundColor = "darkred";
+        }
         container.appendChild(div);
     });
 }

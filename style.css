@@ -14,5 +14,7 @@
     width: 150px;
     align-items: center;
     justify-content: center;
-    background-color: darkred;
+    color: whitesmoke;
+    font-size: larger;
+    background-color: green;
 }
