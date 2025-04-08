@@ -2,7 +2,8 @@ const myLibrary = [];
 
 const container = document.querySelector('.container');
 
-addBookToLibrary('Tolkien', 'The Hobbit', 456, true, 'Pretty good');
+//Display data for project as this version does not have a backend solution.
+addBookToLibrary('J. R. R. Tolkien', 'The Hobbit', 456, true, 'Pretty good');
 addBookToLibrary('Neal Stephenson', 'Snow Crash', 700, true, 'Inspired Metaverse');
 addBookToLibrary('William Gibson', 'Neuromancer', 500, true, "Inspired Matrix");
 addBookToLibrary('William Gibson', 'The Peripheral', 500, false, "Yellow Cover");
@@ -31,7 +32,7 @@ function displayLibrary(){
         const div = document.createElement('div');
         div.textContent = book.title;
         div.classList.toggle('card');
-        if(book.read == false) {
+        if(book.read === false) {
             div.style.backgroundColor = "darkred";
         }
         container.appendChild(div);

@@ -18,3 +18,9 @@
     font-size: larger;
     background-color: green;
 }
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
