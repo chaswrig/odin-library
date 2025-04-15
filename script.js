@@ -3,10 +3,10 @@ const myLibrary = [];
 const container = document.querySelector('.container');
 
 //Display data for project as this version does not have a backend solution.
-addBookToLibrary('J. R. R. Tolkien', 'The Hobbit', 456, true, 'Pretty good');
 addBookToLibrary('Neal Stephenson', 'Snow Crash', 700, true, 'Inspired Metaverse');
 addBookToLibrary('William Gibson', 'Neuromancer', 500, true, "Inspired Matrix");
 addBookToLibrary('William Gibson', 'The Peripheral', 500, false, "Yellow Cover");
+addBookToLibrary('Mark Z. Danielewski', 'House of Leaves', 500, true, 'Creepy')
 displayLibrary();
 
 function Book(author, title, pageCount, read, notes) {
@@ -31,6 +31,9 @@ function displayLibrary(){
     myLibrary.forEach( (book) => {
         const div = document.createElement('div');
         div.textContent = book.title;
+        if (div.textContent.includes('House')){
+            div.style.color = "blue"
+        }
         div.classList.toggle('card');
         if(book.read === false) {
             div.style.backgroundColor = "darkred";
