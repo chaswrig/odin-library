@@ -10,7 +10,30 @@
 <body>
     <div class="container"></div>
     <div class="actions">
-    <button type="button" id="button">Add Book</button>
+    <dialog>
+        <form>
+            <p>
+                <label>
+                    Add A Book
+                </label>
+            </p>
+            <p>
+                <label for="title">Title: </label>
+                <input type="text" name="title" id="title" required>
+
+                <label for="author">Author: </label>
+                <input type="text" name="author" id="author" required>
+
+                <label for="pages">Number of Pages: </label>
+                <input type="number" name="pages" id="pages" required>
+
+                <label for="notes">Notes:</label>
+                <textarea></textarea>
+            </p>
+        </form>
+        <button autofocus>Submit</button>
+    </dialog>
+    <button>Add Book</button>
     </div>
 </body>
 </html>
